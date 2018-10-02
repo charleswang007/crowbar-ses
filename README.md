@@ -11,6 +11,10 @@ The Crowbar-SES barclamp does the following:
 
 Given an already exported configuration file (from ses 5.5), an administrator fallowing documentation can use Crowbar to configure SOC8 to access/use the ceph storage provided by SES 5.5.
 
+## Reference
+
+[Crowbar-Ceph](https://github.com/crowbar/crowbar-ceph)
+
 ## Badges
 
 [![Build Status](https://travis-ci.org/crowbar/crowbar-ceph.svg?branch=master)](https://travis-ci.org/crowbar/crowbar-ceph)
