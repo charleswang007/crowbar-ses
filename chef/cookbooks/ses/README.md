@@ -3,7 +3,7 @@ Chef cookbook for gathering SES configuration data needed to setup SOC
 
 
 DESCRIPTION
-===========
+--------
 
 A Cloud admin can successfully connect the OpenStack cloud to a preconfigured SES storage using an exported SES configuration file without having to manually enter the configuration data.
 
@@ -24,7 +24,7 @@ What is needed for crowbar's SES integration at a high level.
 7) update the keystone database to point to the radowsgw url for swift API
 
 REQUIREMENTS
-============
+--------
 
 Platform
 --------
@@ -41,7 +41,7 @@ https://github.com/opscode/cookbooks
 
 
 ATTRIBUTES
-==========
+--------
 
 Ceph Rados Gateway
 ------------------
@@ -51,10 +51,10 @@ Ceph Rados Gateway
 * node[:ceph][:radosgw][:rgw_addr]
 
 TEMPLATES
-=========
+--------
 
 USAGE
-=====
+--------
 
 Ceph cluster design is beyond the scope of this README, please turn to the
 public wiki, mailing lists, visit our IRC channel, or contact Inktank:
@@ -100,7 +100,7 @@ Ceph Rados Gateway nodes should use the ceph-radosgw role
 
 
 LICENSE AND AUTHORS
-===================
+--------
 
 * Author: Charles Wang <cwang@suse.com>
 
