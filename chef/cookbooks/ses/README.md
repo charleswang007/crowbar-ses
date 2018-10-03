@@ -32,71 +32,14 @@ Platform
 Cookbooks
 ---------
 
-The ceph cookbook requires the following cookbooks from Opscode:
-
-https://github.com/opscode/cookbooks
-
-* apt
-* apache2
-
-
 ATTRIBUTES
 --------
-
-Ceph Rados Gateway
-------------------
-
-* node[:ceph][:radosgw][:api_fqdn]
-* node[:ceph][:radosgw][:admin_email]
-* node[:ceph][:radosgw][:rgw_addr]
 
 TEMPLATES
 --------
 
 USAGE
 --------
-
-Ceph cluster design is beyond the scope of this README, please turn to the
-public wiki, mailing lists, visit our IRC channel, or contact Inktank:
-
-http://ceph.com/docs/master
-http://ceph.com/resources/mailing-list-irc/
-http://www.inktank.com/
-
-
-Ceph Monitor
-------------
-
-Ceph monitor nodes should use the ceph-mon role.
-
-Includes:
-
-* ceph::default
-* ceph::conf
-
-Ceph Metadata Server
---------------------
-
-Ceph metadata server nodes should use the ceph-mds role.
-
-Includes:
-
-* ceph::default
-
-Ceph OSD
---------
-
-Ceph OSD nodes should use the ceph-osd role
-
-Includes:
-
-* ceph::default
-* ceph::conf
-
-Ceph Rados Gateway
-------------------
-
-Ceph Rados Gateway nodes should use the ceph-radosgw role
 
 
 LICENSE AND AUTHORS
