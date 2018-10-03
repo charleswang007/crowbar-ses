@@ -7,7 +7,7 @@ The [Crowbar Framework](https://github.com/crowbar/crowbar) is currently maintai
 an [OpenStack](http://openstack.org) installation framework but is prepared to be a much broader function tool. It was
 originally developed by the [Dell CloudEdge Solutions Team](http://dell.com/openstack).
 
-The Crowbar-SES barclamp does the following:
+The **SES** barclamp does the following:
 
 Given an already exported configuration file (from SES 5.5), an administrator following documentation can use Crowbar to configure SOC 8 to access/use the ceph storage provided by SES 5.5.
 
@@ -19,6 +19,29 @@ Given an already exported configuration file (from SES 5.5), an administrator fo
 cd chef/roles/
 ruby ses-parse.rb sample-config.yml
 ```
+
+> ceph_conf:
+>   cluster_network: 10.84.56.0/21
+>   fsid: d5d7c7cb-5858-3218-a36f-d028df7b0673
+>   mon_host: 10.84.56.8, 10.84.56.9, 10.84.56.7
+>   mon_initial_members: ses-osd2, ses-osd3, ses-osd1
+>   public_network: 10.84.56.0/21
+>　cinder:
+>   key: AQCdfIRaxefEMxAAW4zp2My/5HjoST2Y8mJg8A==
+>   rbd_store_pool: user-cinder
+>　  rbd_store_user: cinder
+>　cinder-backup:
+>　  key: AQBb8hdbrY2bNRAAqJC2ZzR5Q4yrionh7V5PkQ==
+>　  rbd_store_pool: user-backups
+>　  rbd_store_user: cinder-backup
+>　glance:
+>　  key: AQD9eYRachg1NxAAiT6Hw/xYDA1vwSWLItLpgA==
+>　  rbd_store_pool: user-glance
+>　  rbd_store_user: glance
+>　nova:
+>　  rbd_store_pool: user-nova
+>　radosgw_urls: []
+
 
 ## Reference
 
