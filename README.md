@@ -9,7 +9,16 @@ originally developed by the [Dell CloudEdge Solutions Team](http://dell.com/open
 
 The Crowbar-SES barclamp does the following:
 
-Given an already exported configuration file (from ses 5.5), an administrator fallowing documentation can use Crowbar to configure SOC8 to access/use the ceph storage provided by SES 5.5.
+Given an already exported configuration file (from SES 5.5), an administrator following documentation can use Crowbar to configure SOC 8 to access/use the ceph storage provided by SES 5.5.
+
+## Usage Example
+
+* Parse a SES configuration
+
+```
+cd chef/roles/
+ruby ses-parse.rb sample-config.yml
+```
 
 ## Reference
 
@@ -17,10 +26,10 @@ Given an already exported configuration file (from ses 5.5), an administrator fa
 
 ## Badges
 
-[![Build Status](https://travis-ci.org/crowbar/crowbar-ceph.svg?branch=master)](https://travis-ci.org/crowbar/crowbar-ceph)
-[![Code Climate](https://codeclimate.com/github/crowbar/crowbar-ceph/badges/gpa.svg)](https://codeclimate.com/github/crowbar/crowbar-ceph)
-[![Test Coverage](https://codeclimate.com/github/crowbar/crowbar-ceph/badges/coverage.svg)](https://codeclimate.com/github/crowbar/crowbar-ceph)
-[![Dependency Status](https://gemnasium.com/crowbar/crowbar-ceph.svg)](https://gemnasium.com/crowbar/crowbar-ceph)
+[![Build Status](https://travis-ci.org/crowbar/crowbar-ses.svg?branch=master)](https://travis-ci.org/crowbar/crowbar-ses)
+[![Code Climate](https://codeclimate.com/github/crowbar/crowbar-ses/badges/gpa.svg)](https://codeclimate.com/github/crowbar/crowbar-ses)
+[![Test Coverage](https://codeclimate.com/github/crowbar/crowbar-ses/badges/coverage.svg)](https://codeclimate.com/github/crowbar/crowbar-ses)
+[![Dependency Status](https://gemnasium.com/crowbar/crowbar-ses.svg)](https://gemnasium.com/crowbar/crowbar-ses)
 [![Join the chat at https://gitter.im/crowbar/crowbar](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/crowbar/crowbar)
 
 ## Contact
