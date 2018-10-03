@@ -1,7 +1,14 @@
 #!/usr/bin/ruby
 
 require 'yaml'
-config = YAML.load_file('ses.yml')
+config = ARGV[0]
+if config != nil
+   config = YAML.load_file(config)
+   puts "Reading SES config from path: " + ARGV[0]
+else
+   puts "Please specify config path as argument"
+   exit
+end
 $ceph_conf_cluster_network = config['ceph_conf']['cluster_network']
 $ceph_conf_fsid = config['ceph_conf']['fsid']
 $ceph_conf_mon_host = config['ceph_conf']['mon_host']
