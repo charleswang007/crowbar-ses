@@ -18,28 +18,23 @@ class SesService < OpenstackServiceObject
   def initialize(thelogger = nil)
     super(thelogger)
     @bc_name = "ses"
+    @logger = thelogger
   end
 end
 
+
   class << self
+    # turn off multi proposal support till it really works and people ask for
+    # it.
     def self.allow_multiple_proposals?
       false
     end
+
     def role_constraints
       {
-        "cinder-controller" => {
+        "ses-controller" => {
           "unique" => false,
           "count" => 1,
-          "cluster" => true,
-          "admin" => false,
-          "exclude_platform" => {
-            "suse" => "< 12.3",
-            "windows" => "/.*/"
-          }
-        },
-        "cinder-volume" => {
-          "unique" => false,
-          "count" => -1,
           "cluster" => true,
           "admin" => false,
           "exclude_platform" => {
@@ -53,8 +48,12 @@ end
 
   def proposal_dependencies(role)
     answer = []
-    ["cinder", "keystone", "glance", "nova"].each do |dep|
-      answer << { "barclamp" => dep, "inst" => role.default_attributes[@bc_name]["#{dep}_instance"] }
+    deps = ["cinder", "keystone", "glance", "nova"]
+    deps.each do |dep|
+      answer << {
+        "barclamp" => dep,
+        "inst" => role.default_attributes[@bc_name]["#{dep}_instance"]
+      }
     end
     answer
   end
@@ -64,13 +63,6 @@ end
     base = super
 
     nodes = NodeObject.all
-    controllers = select_nodes_for_role(nodes, "cinder-controller", "controller") || []
-    storage = select_nodes_for_role(nodes, "cinder-volume", "storage") || []
-
-    base["deployment"][@bc_name]["elements"] = {
-      "cinder-controller" => controllers.empty? ? [] : [controllers.first.name],
-      "cinder-volume" => storage.map { |x| x.name }
-    }
 
     base["attributes"][@bc_name]["cinder_instance"] = find_dep_proposal("cinder")
     base["attributes"][@bc_name]["nova_instance"] = find_dep_proposal("nova")
@@ -82,6 +74,7 @@ end
   end
 
   def validate_proposal_after_save(proposal)
+    validate_one_for_role proposal, "ses-controller"
 
     super
   end
