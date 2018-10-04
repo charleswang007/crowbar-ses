@@ -92,4 +92,3 @@ end
 
     @logger.debug("Cinder apply_role_pre_chef_call: leaving")
   end
-end
