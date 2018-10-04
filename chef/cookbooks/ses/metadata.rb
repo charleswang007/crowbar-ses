@@ -1,6 +1,6 @@
 name "ses"
 maintainer "INSERT NAME HERE"
-maintainer_emai "INSERT EMAIL HERE"
+maintainer_email "INSERT EMAIL HERE"
 license "Apache 2.0"
 description "Integrates with SES"
 long_description IO.read(File.join(File.dirname(__FILE__), "README.md"))
