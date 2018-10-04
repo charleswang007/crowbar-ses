@@ -16,7 +16,7 @@ Given an already exported configuration file (from SES 5.5), an administrator fo
 * Parse a SES configuration
 
 ```
-cd chef/roles/
+cd chef/cookbooks/ses/files/default/ 
 ruby ses-parse.rb sample-config.yml
 ```
 
