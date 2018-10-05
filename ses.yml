@@ -19,7 +19,12 @@ barclamp:
   display: 'SES'
   description: 'Crowbar SES Integration'
   version: 0
-  user_managed: false
+  requires:
+    - '@crowbar'
+    - 'keystone'
+    - 'cinder'
+    - 'glance'
+    - 'nova'
   member:
     - 'openstack'
     - 'suse_enterprise_storage'
