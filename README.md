@@ -31,6 +31,10 @@ Example:
 
 ![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/ses-barclamp-edit.png "ses-barclamp-edit.png")
 
+We want to make the attribute section editable with drop-down selection menu like the following:
+
+![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/glance-barclamp-edit.png "glance-barclamp-edit.png")
+
 ## Usage Example
 
 * Parse a SES configuration
