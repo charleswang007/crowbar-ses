@@ -13,8 +13,5 @@
 
     %fieldset
       %legend
-        = t(".store_header")
+        = t(".ses_header")
       = select_field :ceph_internal_external, :collection => :default_location_for_ceph, "data-showit" => "internal"
-
-    %fieldset
-      = boolean_field :use_barbican_key_manager

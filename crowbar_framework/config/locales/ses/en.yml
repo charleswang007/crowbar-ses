@@ -5,7 +5,7 @@ en:
     ses:
       edit_attributes:
         test: "Test"
-        store_header: 'Basic Info'
+        ses_header: 'Basic Info'
         ceph_internal_external: 'Internal of External Ceph'
       validation:
         test: "Test"

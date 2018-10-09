@@ -3,7 +3,8 @@
  "description": "Installation for SES",
  "attributes": {
    "ses": {
-     "debug": false
+     "debug": false,
+     "ceph_internal_external": "internal"
    }
  }
 }

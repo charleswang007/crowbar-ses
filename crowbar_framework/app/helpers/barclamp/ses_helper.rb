@@ -17,16 +17,6 @@
 
 module Barclamp
   module SesHelper
-    def api_protocols_for_ses(selected)
-      options_for_select(
-        [
-          ["HTTP", "http"],
-          ["HTTPS", "https"]
-        ],
-        selected.to_s
-      )
-    end
-
     def default_location_for_ceph(selected)
       options_for_select(
         [
