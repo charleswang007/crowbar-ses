@@ -11,6 +11,22 @@ The **SES** barclamp does the following:
 
 Given an already exported configuration file (from SES 5.5), an administrator following documentation can use Crowbar to configure SOC 8 to access/use the ceph storage provided by SES 5.5.
 
+## TO-DO's
+
+1) put SES barclamp under crowbar-ceph or crowbar-openstack
+
+2) provide manual user input & import function for SES config
+
+3) centralize the data configuration to one place
+
+4) automate the setup pieces that are currently missing (generation of ceph.conf & the cephx user credential files). 
+
+## Problem
+
+1) Not able to display the attribute select field on propopal edit page as defined in crowbar_framework/app/views/barclamp/ses/_edit_attributes.html.haml
+
+![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/ses-barclamp-edit.png) "ses-barclamp-edit.png"
+
 ## Usage Example
 
 * Parse a SES configuration
