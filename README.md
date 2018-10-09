@@ -25,7 +25,7 @@ Given an already exported configuration file (from SES 5.5), an administrator fo
 
 1) Not able to display the attribute select field on propopal edit page as defined in *crowbar_framework/app/views/barclamp/ses/_edit_attributes.html.haml*
 
-![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/ses-barclamp-edit.png) "ses-barclamp-edit.png")
+![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/ses-barclamp-edit.png "ses-barclamp-edit.png")
 
 ## Usage Example
 
