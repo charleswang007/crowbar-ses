@@ -13,17 +13,21 @@ Given an already exported configuration file (from SES 5.5), an administrator fo
 
 ## TO-DO's
 
-1) put SES barclamp under crowbar-ceph or crowbar-openstack
+1) Put SES barclamp under crowbar-ceph or crowbar-openstack
 
-2) provide manual user input & import function for SES config
+2) Provide manual user input & import function for SES config
 
-3) centralize the data configuration to one place
+3) Centralize the data configuration to one place
 
-4) automate the setup pieces that are currently missing (generation of ceph.conf & the cephx user credential files). 
+4) Automate the setup pieces that are currently missing (generation of ceph.conf & the cephx user credential files)
 
 ## Problem
 
 1) Not able to display the attribute select field on propopal edit page as defined in *crowbar_framework/app/views/barclamp/ses/_edit_attributes.html.haml*
+
+Example:
+
+(attribute,option)=(ceph_internal_external,internal/external)
 
 ![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/ses-barclamp-edit.png "ses-barclamp-edit.png")
 
