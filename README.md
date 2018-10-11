@@ -21,19 +21,9 @@ Given an already exported configuration file (from SES 5.5), an administrator fo
 
 4) Automate the setup pieces that are currently missing (generation of ceph.conf & the cephx user credential files)
 
-## Problem
-
-1) Not able to display the attribute select field on propopal edit page as defined in *crowbar_framework/app/views/barclamp/ses/_edit_attributes.html.haml*
-
-Example:
-
-(attribute,option)=(ceph_internal_external,internal/external)
+## Barclamp Edit Page
 
 ![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/ses-barclamp-edit.png "ses-barclamp-edit.png")
-
-We want to make the attribute section editable with drop-down selection menu like the following:
-
-![alt text](https://github.com/charleswang007/crowbar-ses/blob/master/chef/cookbooks/ses/files/default/glance-barclamp-edit.png "glance-barclamp-edit.png")
 
 ## Usage Example
 
