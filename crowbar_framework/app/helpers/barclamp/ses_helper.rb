@@ -26,5 +26,15 @@ module Barclamp
         selected.to_s
       )
     end
+    def default_format_for_config(selected)
+      options_for_select(
+        [
+          ["YAML", "yaml"],
+          ["JSON", "json"],
+          ["INI", "ini"]
+        ],
+        selected.to_s
+      )
+    end
   end
 end
