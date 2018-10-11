@@ -8,7 +8,11 @@ en:
         glance_instance: 'Glance Instance'
         nova_instance: 'Nova Instance'
         keystone_instance: 'Keystone Instance'
-        yaml_header: "Config yaml file"
-        yaml_file: "SES config yaml file"
+        yaml_header: "SES Config File"
+        yaml_file: "Paste config plain text"
+        ses_header: 'Basic Settings'
+        ceph_internal_external: 'Internal or External Ceph'
+        config_format: 'Configuration Format'
+
       validation:
         test: "Test"

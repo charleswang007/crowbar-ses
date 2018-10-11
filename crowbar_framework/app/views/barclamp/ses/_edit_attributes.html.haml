@@ -10,6 +10,10 @@
 
     %fieldset
       %legend
-        = t(".yaml_header")
+        = t(".ses_header")
+      = select_field :config_format, :collection => :default_format_for_config, "data-showit" => "yaml"
+      = select_field :ceph_internal_external, :collection => :default_location_for_ceph, "data-showit" => "internal"
 
+      %legend
+        = t(".yaml_header")
       = text_field %w(yaml_file)

@@ -9,6 +9,8 @@
      "keystone_instance": "none",
      "glance_instance": "none",
      "yaml_file": "none",
+     "ceph_internal_external": "internal",
+     "config_format": "YAML",
      "ceph_conf": {
        "cluster_network": "",
        "fsid": "",
